@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+  <title>Turnos Programados</title>
+  <style>
+    .slots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .slot {
+      padding: 10px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+    .slot.occupied {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="TituloListadoProductos">Turnos Programados</h1>
+    <div class="logo">
+      <img src="../img/7248230.jpg" alt="logo">
+    </div>
+    <nav>
+      <ul class="botonera">
+        <li><a href="../index.html"><button id="boton_inicio">Inicio</button></a></li>
+        <li><a href="../pages/Guardia.html"><button id="boton_inicio">Guardia</button></a></li>
+        <li><a href="../pages/Staff.html"><button id="boton_staff">Staff Profesional</button></a></li>
+        <li><a href="../pages/Distribuidores.html"><button id="boton_distribuidores">Distribuidores</button></a></li>
+        <li><a href="../pages/Sobre nosotros.html"><button id="boton_guardia">Sobre Nosotros</button></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Atencion programada</h1>
+    <h3>Maximo 2 turnos diarios por persona.</h3>
+    <section>
+      <form id="form_turnos">
+        <label for="cantidad_turnos">¿Cuántos turnos generales programados?</label>
+        <input type="number" id="cantidad_turnos" name="cantidad_turnos" min="1" max="2" required>
+        <br>
+        <label for="jubilado">¿Es usted jubilado?</label>
+        <input type="checkbox" id="jubilado" name="jubilado">
+        <br>
+        <input type="submit" value="Tomar turnos">
+      </form>
+      <h2>Turnos disponibles</h2>
+      <div class="slots">
+        <div class="slot" data-day="2023-05-22" data-time="10:00 AM">10:00 AM</div>
+        <div class="slot" data-day="2023-05-22" data-time="11:00 AM">11:00 AM</div>
+        <div class="slot" data-day="2023-05-23" data-time="12:00 PM">12:00 PM</div>
+        <div class="slot" data-day="2023-05-23" data-time="13:00 PM">13:00 PM</div>
+        <div class="slot" data-day="2023-05-23" data-time="14:00 PM">14:00 PM</div>
+      </div>
+    </section>
+    <div id="resultado"></div>
+  </main>
+  <footer>
+  </footer>
+  <script src="../scripts/Turnos.js"></script>
+</body>
+</html>
