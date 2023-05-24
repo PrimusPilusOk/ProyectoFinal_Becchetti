@@ -1,4 +1,4 @@
-# ![freqtrade](./img/7248230.jpg)
+# ![Pet Care](./img/7248230.jpg)
 
 “Pet Care” – Clínica Veterinaria. 
 
